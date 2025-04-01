@@ -1,0 +1,127 @@
+/* General Styles */
+.chatPage {
+  width: 80%;
+  height: 100%;
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #131313;
+  color: #ffffff;
+  font-family: 'Inter', sans-serif;
+  overflow: hidden;
+  padding-top: 20px;
+}
+
+.wrapper {
+  flex: 1;
+  overflow-y: auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 60px;
+}
+
+.chatPage .chat {
+  width: 55%;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 20px;
+  overflow-y: auto; /* Allows scrolling */
+  flex-grow: 1;
+  align-items: flex-start; /* Ensures messages flow correctly */
+}
+
+.loading, .error {
+  text-align: center;
+  color: #888;
+  font-size: 18px;
+  margin-top: 50px;
+}
+
+/* User & Bot Messages */
+.message {
+  display: flex;
+  flex-direction: column;
+  padding: 16px 40px;
+  border-radius: 12px;
+  max-width: 80%;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(255, 255, 255, 0.1);
+  word-wrap: break-word;
+  margin-bottom: 10px;
+  width: fit-content;
+  word-wrap: break-word;
+}
+
+.message.user {
+  background-color: #2c2937;
+  align-self: flex-end;
+}
+
+.message.bot {
+  background-color: #3a3a4f;
+  align-self: flex-start;
+  width: fit-content;
+  word-wrap: break-word;
+}
+
+/* Responsive Design for Mobile Screens */
+@media (max-width: 768px) {
+
+  .chatPage {
+    padding-top: 100px ;
+    width: 110%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #131313;
+    color: #ffffff;
+    font-family: 'Inter', sans-serif;
+    overflow: hidden;
+  }
+  
+  /* Ensure the chat container is properly structured */
+  .chatPage .chat {
+    width: 100%;
+    max-width: 100%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start; /* Align messages properly */
+  }
+
+  /* Ensure messages have a proper width */
+  .chatPage .message {
+    font-size: 14px;
+    padding: 12px 19px;
+    max-width: 100%;
+    border-radius: 10px;
+    word-wrap: break-word;
+    width: auto; /* Change from fit-content to auto */
+  }
+
+  /* Ensure user messages align properly */
+  .message.user {
+    align-self: flex-end !important; /* Force user messages to the right */
+    background-color: #2c2937;
+    text-align: left;
+    max-width: 75%;
+  }
+
+  /* Ensure bot messages span full width */
+  .message.bot {
+    align-self: flex-start;
+    width: 100%;
+    background-color: #000000;
+    text-align: left;
+    font-size: 15px;
+    padding: 10px 36px;
+    border-radius: 10px;
+  }
+}

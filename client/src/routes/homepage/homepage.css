@@ -1,0 +1,252 @@
+/* General Layout */
+.homepage {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Background Spline */
+.spline-bg {
+  position: absolute;
+  bottom: -50px; /* Moves it down */
+  right: -50px;
+  width: 70%;
+  height: 110%;
+  z-index: -2;
+}
+
+/* Content */
+.homepage .content {
+  right: 20%;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+  align-items: center;
+  z-index: 1;
+}
+
+/* Left Section */
+.left {
+  flex: 1;
+  text-align: left;
+  padding-left: 40px;
+  
+}
+
+.left h1 {
+  letter-spacing: 3px;
+  font-family: 'Zen Dots', sans-serif;
+  font-size: 72px;
+  background: linear-gradient(to right, #217bfe, #e55571);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.left h4 {
+  position: absolute;
+  left: 45%;
+  top: 45%;
+  
+}
+.left h2 {
+  font-size: 36px;
+  color: white;
+  margin-top: 5px;
+}
+
+.left p {
+  font-size: 18px;
+  color: #c9c8c8;
+  max-width: 450px;
+  margin-bottom: 20px; /* Added space below paragraph */
+}
+
+/* CTA Button */
+.cta-btn {
+  padding: 12px 24px;
+  font-size: 18px;
+  color: white;
+  background-color: #217bfe;
+  border-radius: 25px;
+  text-decoration: none;
+  transition: 0.3s;
+  display: inline-block;
+  
+}
+
+.cta-btn:hover {
+  background-color: white;
+  color: #217bfe;
+}
+
+/* Chat Container */
+.homepage .chat-container {
+  position: absolute;
+  bottom: 10%;
+  right: 5%;
+  width: 500px;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 12px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Chat Animation */
+.homepage .chat1 {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.homepage .chat1 img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.typing-animation {
+  font-size: 16px;
+  color: white;
+}
+
+/* Footer */
+.terms {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.terms img {
+  width: 20px;
+  height: 20px;
+}
+
+.terms .links {
+  display: flex;
+  gap: 10px;
+  color: #888;
+  font-size: 12px;
+}
+
+.terms a {
+  color: #888;
+  text-decoration: none;
+}
+
+.terms a:hover {
+  color: white;
+}
+
+@media (max-width: 1900px){
+  .left h4 {
+  position: absolute;
+  left: 43%;
+  top: 40%;
+  
+}
+}
+
+@media (max-width: 1500px){
+  .left h4 {
+  position: absolute;
+  left: 41%;
+  top: 40%;
+  
+}
+}
+/* Ensure the homepage layout adapts to smaller screens */
+@media (max-width: 768px) {
+  .homepage  .content {
+    align-items: center;
+    position: fixed;
+    top: 10%;
+    left: 5%; /* Move everything higher */
+    width: 90%;
+    text-align: center;
+    padding: 0 20px;
+  }
+
+  .left {
+    padding: 0;
+    text-align: center;
+    
+    
+    
+  }
+  .left h4 {
+    position: relative;
+    
+    
+  }
+  .left h1 {
+    font-size: 48px;
+    white-space: nowrap;
+    text-align: center;
+  }
+
+  .left h2 {
+    font-size: 28px;
+    text-align: center;
+  }
+
+  .left p {
+    
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .cta-btn {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+  .typing-animation {
+    font-size: 12px;
+  }
+  /* Adjust chat animation for smaller screens */
+  .homepage  .chat-container {
+    position: fixed; 
+    width: 90%;
+    max-width: 400px;
+    bottom: 10%;
+    right: 9%;
+    align-items: center;
+    padding: 10px;
+    font-size: 14px;
+    
+  }
+
+  /* Make the spline background fit better */
+  .spline-bg {
+    width: 125%;
+    height: 100%;
+    right: 0;
+    bottom: 30;
+    position: absolute;
+  }
+
+  /* Adjust footer for smaller screens */
+  .terms {
+    position: fixed; 
+    align-items: center;
+    bottom: 10px;
+    font-size: 10px;
+    gap: 5px;
+  }
+
+  .terms img {
+    width: 16px;
+    height: 16px;
+  }
+}

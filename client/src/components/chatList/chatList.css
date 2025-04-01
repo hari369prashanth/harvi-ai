@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap');
+
+.chatList {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  font-size: 18px;
+
+  hr {
+    border: none;
+    height: 2px;
+    background-color: #ddd;
+    opacity: 0.1;
+    border-radius: 5px;
+    margin: 20px 0px;
+  }
+
+  .title {
+    display: flex;  /* Makes it easier to adjust width and height */
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 21px;
+    margin-bottom: 12px;
+    letter-spacing: 3px;
+  }
+
+  .list {
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    font-size: 15px;
+  }
+
+  a {
+    transition: all 0.3s ease-in-out;
+    padding: 15px 20px; 
+    border-radius: 10px;
+    font-size: 15px;
+
+    &:hover {
+      background-color: #2c2937;
+    }
+  }
+
+  .upgrade {
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 12px;
+
+    img {
+      width: 24px;
+      height: 24px;
+    }
+
+    .texts {
+      
+      display: flex;
+      flex-direction: column;
+
+      span {
+        &:first-child {
+          font-weight: 600;
+        }
+
+        &:last-child {
+          color: #888;
+        }
+      }
+    }
+  }
+}
+.chatList .texts span {
+  font-family: 'Inter', sans-serif; /* Override Zen Dots for harvitt.in */
+}
+.list span {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400; /* Override Zen Dots for Recent Chats */
+}

@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap');
+
+.rootLayout {
+  padding: 16px 45px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Inter', sans-serif; 
+}
+
+/* HEADER */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Aligns logo and text to the left */
+  gap: 16px; /* Adds spacing between logo and text */
+  padding-bottom: 12px; /* Adds space between header and content */
+  font-family: 'Inter', sans-serif;
+}
+
+/* LOGO */
+.logo {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  gap: 12px;
+}
+
+/* Logo image */
+.logo img {
+  width: clamp(36px, 5vw, 36px);
+  height: auto;
+}
+
+/* TEXT */
+span {
+  font-size: clamp(14px, 2vw, 18px);
+  font-family: 'Zen Dots', sans-serif;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+/* MAIN CONTENT */
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column; /* Makes sure content appears below */
+  justify-content: flex-start;
+  overflow: hidden;
+  
+  width: 100%;
+}
+
+/* Hide text on mobile screens */
+
+header span, header a, .texts span {
+  font-family: 'Inter', sans-serif; /* Make sure regular fonts are used for all other text */
+}
+
+@media (max-width: 768px) {
+  /* Hide HARVI AI text on mobile */
+  .logo span {
+    display: none;
+  }
+
+  /* Center logo in header */
+  header {
+    justify-content: center;
+    position: relative;
+  }
+
+  .logo {
+    margin: 0 auto;
+  }
+
+  /* Move user profile button to right */
+  .user1 {
+    position: fixed;
+    right: 20px;
+    
+  }
+}
